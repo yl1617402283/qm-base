@@ -13,6 +13,7 @@ spring:
           password: yhyy@2018
           force-pull: true
           basedir: /data/config-repo
+      profile: dev
     stream:
       kafka:
         binder:
