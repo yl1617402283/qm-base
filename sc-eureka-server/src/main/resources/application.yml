@@ -11,14 +11,28 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8669/eureka/
+    register-with-eureka: false
+    fetch-registry: false
 ---
 spring:
   profiles: test
 
 ---
 spring:
-  profiles: alidev
-
+  profiles: dev
+  server:
+    port: 8669
+  eureka:
+    instance:
+      prefer-ip-address: true
+    server:
+      enable-self-preservation: false
+      eviction-interval-timer-in-ms: 2000
+    client:
+      serviceUrl:
+        defaultZone: http://172.19.173.93:8669/eureka/
+      registerWithEureka: false
+      fetchRegistry: false
 ---
 spring:
   profiles: prod1
