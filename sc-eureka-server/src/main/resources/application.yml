@@ -16,6 +16,22 @@ eureka:
 ---
 spring:
   profiles: test
+---
+spring:
+  profiles: testbug
+  server:
+      port: 8669
+    eureka:
+      instance:
+        prefer-ip-address: true
+      server:
+        enable-self-preservation: false
+        eviction-interval-timer-in-ms: 2000
+      client:
+        serviceUrl:
+          defaultZone: http://172.19.173.93:8669/eureka/
+        registerWithEureka: false
+        fetchRegistry: false
 
 ---
 spring:
