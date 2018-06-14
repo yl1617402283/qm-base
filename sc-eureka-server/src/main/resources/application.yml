@@ -29,7 +29,7 @@ spring:
       eviction-interval-timer-in-ms: 2000
     client:
       serviceUrl:
-        defaultZone: http://172.19.173.107:8669/eureka/
+        defaultZone: http://172.19.173.115:8669/eureka/
       registerWithEureka: false
       fetchRegistry: false
 ---
