@@ -95,37 +95,37 @@ spring:
   application:
     name: sc-eureka-server
   profiles: devfk1
+server:
+  port: 8669
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   server:
-      port: 8669
-  eureka:
-    instance:
-      prefer-ip-address: true
-      instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-    server:
-      enable-self-preservation: false
-      eviction-interval-timer-in-ms: 2000
-    client:
-      serviceUrl:
-        defaultZone: http://192.168.2.99:8669/eureka/
-      registerWithEureka: false
-      fetchRegistry: false
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.2.99:8669/eureka/
+    registerWithEureka: false
+     fetchRegistry: false
 ---
 spring:
   application:
     name: sc-eureka-server
   profiles: devfk2
+server:
+  port: 8669
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   server:
-      port: 8669
-  eureka:
-    instance:
-      prefer-ip-address: false
-      instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-    server:
-      enable-self-preservation: true
-      eviction-interval-timer-in-ms: 2000
-    client:
-      serviceUrl:
-        defaultZone: http://192.168.2.90:8669/eureka/
-      registerWithEureka: false
-      fetchRegistry: fals
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.2.99:8669/eureka/
+    registerWithEureka: false
+     fetchRegistry: false
 ---
