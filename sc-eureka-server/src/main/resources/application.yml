@@ -90,3 +90,20 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.2.226:8669/eureka/,http://192.168.2.228:8669/eureka/
+---
+spring:
+  profiles: devfk
+  server:
+      port: 8669
+  eureka:
+    instance:
+      prefer-ip-address: true
+    server:
+      enable-self-preservation: false
+      eviction-interval-timer-in-ms: 2000
+    client:
+      serviceUrl:
+        defaultZone: http://172.19.173.115:8669/eureka/
+      registerWithEureka: false
+      fetchRegistry: false
+---
