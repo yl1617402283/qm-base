@@ -102,11 +102,13 @@ spring:
       prefer-ip-address: true
       instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     server:
-      enable-self-preservation: true
+      enable-self-preservation: false
       eviction-interval-timer-in-ms: 2000
     client:
       serviceUrl:
         defaultZone: http://192.168.2.99:8669/eureka/
+      registerWithEureka: false
+      fetchRegistry: false
 ---
 spring:
   application:
@@ -116,7 +118,7 @@ spring:
       port: 8669
   eureka:
     instance:
-      prefer-ip-address: true
+      prefer-ip-address: false
       instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     server:
       enable-self-preservation: true
@@ -124,4 +126,6 @@ spring:
     client:
       serviceUrl:
         defaultZone: http://192.168.2.90:8669/eureka/
+      registerWithEureka: false
+      fetchRegistry: fals
 ---
