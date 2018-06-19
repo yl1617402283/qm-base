@@ -100,8 +100,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-    hostname: ${spring.cloud.client.ipAddress}
+    appname: eureka
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 2000
@@ -118,8 +117,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    hostname: ${spring.cloud.client.ipAddress}
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    appname: eureka
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 2000
