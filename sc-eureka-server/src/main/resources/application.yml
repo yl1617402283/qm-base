@@ -92,36 +92,33 @@ eureka:
       defaultZone: http://192.168.2.226:8669/eureka/,http://192.168.2.228:8669/eureka/
 ---
 spring:
-  application:
-    name: sc-eureka-server
-  profiles: devfk2
-server:
-  port: 8669
-eureka:
-  instance:
-    prefer-ip-address: true
-    appname: eureka
-  server:
-    enable-self-preservation: false
-    eviction-interval-timer-in-ms: 2000
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.2.90:8669/eureka/
----
-spring:
-  application:
-    name: sc-eureka-server
   profiles: devfk1
 server:
   port: 8669
 eureka:
   instance:
     prefer-ip-address: true
-    appname: eureka
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.2.90:8669/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+---
+spring:
+  profiles: devfk2
+server:
+  port: 8669
+eureka:
+  instance:
+    prefer-ip-address: true
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 2000
   client:
     serviceUrl:
       defaultZone: http://192.168.2.99:8669/eureka/
----
+    registerWithEureka: true
+    fetchRegistry: true
