@@ -108,7 +108,7 @@ eureka:
     serviceUrl:
       defaultZone: http://192.168.2.99:8669/eureka/
     registerWithEureka: false
-     fetchRegistry: false
+    fetchRegistry: false
 ---
 spring:
   application:
@@ -127,5 +127,5 @@ eureka:
     serviceUrl:
       defaultZone: http://192.168.2.99:8669/eureka/
     registerWithEureka: false
-     fetchRegistry: false
+    fetchRegistry: false
 ---
