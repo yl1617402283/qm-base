@@ -92,6 +92,8 @@ eureka:
       defaultZone: http://192.168.2.226:8669/eureka/,http://192.168.2.228:8669/eureka/
 ---
 spring:
+  application:
+    name: sc-eureka-server
   profiles: devfk1
   server:
       port: 8669
@@ -107,6 +109,8 @@ spring:
         defaultZone: http://192.168.2.99:8669/eureka/
 ---
 spring:
+  application:
+    name: sc-eureka-server
   profiles: devfk2
   server:
       port: 8669
