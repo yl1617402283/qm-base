@@ -104,8 +104,6 @@ spring:
     client:
       serviceUrl:
         defaultZone: http://192.168.2.99:8669/eureka/
-      registerWithEureka: false
-      fetchRegistry: false
 ---
 spring:
   profiles: devfk2
@@ -120,6 +118,4 @@ spring:
     client:
       serviceUrl:
         defaultZone: http://192.168.2.90:8669/eureka/
-      registerWithEureka: false
-      fetchRegistry: false
 ---
