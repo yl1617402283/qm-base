@@ -108,7 +108,7 @@ spring:
       fetchRegistry: false
 ---
 spring:
-  profiles: devfk12
+  profiles: devfk2
   server:
       port: 8669
   eureka:
