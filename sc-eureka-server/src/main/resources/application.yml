@@ -92,8 +92,6 @@ eureka:
       defaultZone: http://192.168.2.226:8669/eureka/,http://192.168.2.228:8669/eureka/
 ---
 spring:
-  application:
-    name: sc-eureka-server
   profiles: devfk1
 server:
   port: 8669
@@ -107,12 +105,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.2.99:8669/eureka/
-    registerWithEureka: false
-    fetchRegistry: false
 ---
 spring:
-  application:
-    name: sc-eureka-server
   profiles: devfk2
 server:
   port: 8669
@@ -126,6 +120,4 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.2.90:8669/eureka/
-    registerWithEureka: false
-    fetchRegistry: false
 ---
