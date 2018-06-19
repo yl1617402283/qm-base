@@ -8,7 +8,7 @@ spring:
       server:
         git:
           uri: http://code.yuehuayueyou.com:3000/yhyy/yhyyrepo.git
-          search-paths: testbug
+          search-paths: devfk
           username: yhyy
           password: yhyy@2018
           force-pull: true
@@ -26,7 +26,7 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://172.19.173.115:8669/eureka/
+      defaultZone: http://192.168.2.90:8669/eureka/
 
 management:
   security:
