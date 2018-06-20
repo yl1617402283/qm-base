@@ -11,8 +11,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8669/eureka/
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false #启动高可用的时候记得赋值为true
+    fetch-registry: false #启动高可用的时候记得赋值为true
 ---
 spring:
   profiles: test
