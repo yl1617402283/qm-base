@@ -8,7 +8,7 @@ spring:
       server:
         git:
           uri: http://code.yuehuayueyou.com:3000/yhyy/yhyyrepo.git
-          search-paths: testbug
+          search-paths: demo
           username: yhyy
           password: yhyy@2018
           force-pull: true
