@@ -13,20 +13,12 @@ spring:
           password: yhyy@2018
           force-pull: true
           basedir: /data/config-repo
-    stream:
-      kafka:
-        binder:
-          brokers: 192.168.1.134:9092
-          zk-nodes: 192.168.1.134:2181
-    bus:
-      trace:
-        enabled: true
 eureka:
   instance:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://192.168.1.178:8669/eureka/
+      defaultZone: http://localhost:8669/eureka/
 
 management:
   security:
