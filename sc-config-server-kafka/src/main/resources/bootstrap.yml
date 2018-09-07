@@ -7,10 +7,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/lupeng-22/repo.git
+          uri: http://192.168.1.124/repo/repo.git
           search-paths: local
-          username: 18235960226@163.com
-          password: 19900522lupeng
+          username: lupeng
+          password: 199022lupeng
           force-pull: true
           basedir: /data/config-repo
 eureka:
