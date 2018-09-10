@@ -9,9 +9,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 @SpringBootApplication
 public class ConfigServerKafka {
-
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(ConfigServerKafka.class).web(true).run(args);
 	}
-
 }

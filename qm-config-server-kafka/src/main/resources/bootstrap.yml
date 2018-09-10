@@ -2,15 +2,15 @@ server:
   port: 7861
 spring:
   application:
-    name: sc-config-server-kafka
+    name: qm-config-server-kafka
   cloud:
     config:
       server:
         git:
-          uri: http://192.168.1.124/repo/repo.git
+          uri: https://github.com/yl1617402283/qmcy-repo.git
           search-paths: local
-          username: lupeng
-          password: 199022lupeng
+          username: yl1617402283
+          password: lovelin.
           force-pull: true
           basedir: /data/config-repo
 eureka:
